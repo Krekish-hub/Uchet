@@ -1,0 +1,47 @@
+﻿<Page x:Class="Uchet.Pages.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Uchet.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MenuPage">
+
+    <Grid>
+        <StackPanel>
+            <!-- Кнопка для открытия и закрытия бокового меню -->
+            <Button Content="≡" 
+                    Click="ToggleMenu" 
+                    Grid.Column="0" 
+                    VerticalAlignment="Top"
+                    Style="{StaticResource Menu}"
+                    HorizontalAlignment="Left"/>
+            <Border
+                x:Name="SlideMenu"
+                Background="LightGray"
+                Opacity="0.5"
+                Width="0"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Left">
+                <StackPanel>
+                    <Button 
+                        Content="Зарплата" 
+                        Style="{StaticResource OK}"
+                        Name="btnZarplata"
+                        Click="btnZarplata_Click"/>
+                    <Button 
+                        Content="Смена"
+                        Style="{StaticResource OK}"
+                        Name="btnSmena"
+                        Click="btnSmena_Click"/>
+                    <Button
+                        Content="Табель"
+                        Style="{StaticResource OK}"
+                        Name="btnTabel"
+                        Click="btnTabel_Click"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>
